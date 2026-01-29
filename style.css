@@ -1,189 +1,112 @@
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-h1, h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #FF6B35; 
-}
-
-/* Header */
-header {
-    background-color: #000000;
-    padding: 20px;
-}
-
-/* Hover su header */
-header:hover {
-    background-color: #004781;
-}
-
-header img {
-    height: 40px;
-}
-
-/* Navbar flexbox */
-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
+/* Reset di base */
+* {
     margin: 0;
-    flex-wrap: wrap;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav li {
-    margin-right: 20px;
+body {
+    font-family: Arial, sans-serif;
 }
 
-
-nav a {
-    color: #FFD700;
-    text-decoration: none;
-    padding-bottom: 5px;
-    transition: border-bottom 0.3s ease;
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover link border-bottom */
-nav a:hover {
-    border-bottom: 2px solid #FFD700;
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-main {
-    padding: 40px;
-}
-
-/* Sezione principale con background-image */
-section {
-    background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200');
+/* Hero Section */
+.hero-section {
+    background-color: #6c757d;
+    background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1920&h=1080&fit=crop');
     background-size: cover;
-    padding: 60px 40px;
+    background-position: center;
+    padding: 150px 20px;
+    text-align: center;
 }
 
-/* Contenitore flex per articoli e aside */
-.articles-container {
-    display: flex;
-    align-items: flex-start;
+.hero-title {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 20px;
 }
 
-/* Sezione articoli con width 60% */
-.articles-section {
-    width: 60%;
-    margin-right: 20px;
-}
-
-/* Asidebackground giallo */
-aside {
-    width: 40%;
-    background-color: #FFF9C4;
-    padding: 20px;
-    border-radius: 8px;
-
-}
-
-/* Stile articoli */
-article {
-    background-color: #FFFFFF; /* Background bianco articoli */
-    padding: 20px;
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: white;
     margin-bottom: 30px;
-    border-radius: 8px;
 }
 
-article img {
-    width: 100%;
-    border-radius: 5px;
+/* Sezione Film */
+#films {
+    background-color: #f8f9fa;
 }
 
-/* torna su */
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    z-index: 1000;
-    border-radius: 50%;
-    animation: bounce 2s infinite;
+#films h2 {
+    font-size: 2.5rem;
+    color: #333;
 }
 
-/* Animazione bottone */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.card {
+    border: 1px solid #ddd;
 }
 
-/* Hover sul bottone torna su */
-.back-to-top:hover {
-    animation: none;
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+.card img {
+    height: 350px;
+    object-fit: cover;
 }
 
-/* Media smartphone 600px */
-@media screen and (max-width: 600px) {
-    /* Navbar colonna su mobile */
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    
-    nav li:last-child {
-        margin-bottom: 0;
-    }
-    
-    /* Riduzione dimensione link navbar */
-    nav a {
-        font-size: 14px;
-    }
-    
-    /* Contenitore articoli colonna mobile */
-    .articles-container {
-        flex-direction: column;
-    }
-    
-    /* Articoli e aside su mobile */
-    .articles-section,
-    aside {
-        width: 100%;
-    }
-    
-    .articles-section {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    /* padding su mobile */
-    main {
-        padding: 20px;
-    }
-    
-    section {
-        padding: 30px 20px;
-    }
-    
-    header {
-        padding: 15px;
-    }
-    
-    /* Riduzione dimensione logo */
-    header img {
-        height: 30px;
-    }
-    
-    /* Riduzione dimensione bottone torna su */
-    .back-to-top {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
+.badge {
+    font-size: 0.8rem;
+}
+
+/* Form Lavora con Noi */
+#contact {
+    background-color: #343a40;
+}
+
+#contact h2 {
+    font-size: 2rem;
+}
+
+.form-control {
+    border: 1px solid #495057;
+    padding: 10px;
+}
+
+.btn-danger {
+    padding: 12px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+}
+
+footer h5 {
+    color: #dc3545;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer hr {
+    border-color: #333;
+}
+
+/* Utilities */
+.bg-black {
+    background-color: #000;
 }
